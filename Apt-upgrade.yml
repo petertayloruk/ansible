@@ -1,4 +1,6 @@
 - name: update apt packages
+  hosts: all
+  tasks:
   apt: >
     update_cache=yes
     cache_valid_time=3600
