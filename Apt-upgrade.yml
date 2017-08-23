@@ -1,3 +1,4 @@
+<<<<<<< HEAD
    - name: Check if there are packages available to be installed/upgraded
       host: all
       command: /usr/lib/update-notifier/apt-check --package-names
@@ -6,3 +7,14 @@
       hosts: all
       apt: update_cache=yes upgrade=dist
       when: packages.stderr != ""
+=======
+  - name: Check if there are packages available to be installed/upgraded
+    host: all
+    command: /usr/lib/update-notifier/apt-check --package-names
+    register: packages
+  - name: Upgrade all packages to the latest version
+    hosts: all
+    apt: update_cache=yes upgrade=dist
+    when: packages.stderr != ""
+
+>>>>>>> e736e40440963269d98e1f1f316efe214fc64591
