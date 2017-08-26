@@ -42,6 +42,7 @@
 
       # Sending an e-mail using Gmail SMTP servers
     - mail:
+        sudo: false
         host: smtp.gmail.com
         port: 587
         username: username@gmail.com
